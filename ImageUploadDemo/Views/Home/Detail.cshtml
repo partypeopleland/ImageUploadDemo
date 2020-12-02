@@ -1,0 +1,15 @@
+﻿@model Dictionary<string,byte[]>
+
+@{
+    ViewBag.Title = "Detail";
+    
+    foreach (var fileName in Model.Keys)
+    {
+        <div>
+            <h3>@fileName</h3>
+            <img src="data:image/png;base64, @Convert.ToBase64String(Model[fileName])" alt="" width="80%">           
+        </div>
+    }
+}
+
+

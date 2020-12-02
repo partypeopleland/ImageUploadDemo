@@ -1,0 +1,22 @@
+﻿@model List<ImageUploadDemo.Models.ZipEntity>
+@{
+    ViewBag.Title = "圖片列表";
+    <table class="table table-condensed table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th><th>原始大小</th><th>壓縮大小</th><th>壓縮比例</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td><a href="/Home/Detail/@d.Id">@d.Id</a></td>
+                <td>@d.Before</td>
+                <td>@d.After</td>
+                <td>@d.Rate</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
