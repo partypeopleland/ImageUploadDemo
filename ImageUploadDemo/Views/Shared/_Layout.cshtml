@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,6 +23,7 @@
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("列表", "Index", "Home")</li>
                 <li>@Html.ActionLink("上傳圖片", "Upload", "Home")</li>
+                <li>@Html.ActionLink("表單+圖片上傳", "Form", "Home")</li>
             </ul>
         </div>
     </div>
@@ -36,6 +38,7 @@
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 @RenderSection("scripts", required: false)
 </body>
 </html>

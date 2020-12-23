@@ -1,0 +1,34 @@
+﻿<div id="app">
+    <h2>表單資料+圖片上傳+剪貼簿貼上</h2>
+    <form method="post" action="/Home/Form" enctype="multipart/form-data">
+        <p>
+            <label>Name</label>
+            <input type="text" v-model="form.name">
+            <br/>
+
+            <label>附加檔案</label>
+            <input ref="filesInfo" type="file" name="files" multiple v-on:change="filesChangeHandler"/>
+            <i class="far fa-3x fa-file-image" v-for="img in images" v-on:click="displayUploadImage(img)"></i>
+            
+            <img id="preview" src="" alt="" width="300"/>
+            
+            <hr/>
+            <div @@paste="CheckPasteUpload">
+                <div>在這邊貼上</div>
+                <img id="img1" src="" alt="" />
+                <div>※附件限制上傳圖檔，最多5張(每張1000KB內)，檔案格式JPG、JPEG、PNG、GIF、BMP。</div>
+            </div>
+        </p>
+        <input type="button" v-on:click="submit" value="Send">
+    </form>
+
+    <hr/>
+    <div>
+        <pre>{{ form }}</pre>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Page/Home/form.js"></script>
+}

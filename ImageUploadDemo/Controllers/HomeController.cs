@@ -24,7 +24,20 @@ namespace ImageUploadDemo.Controllers
             return View(Adapter.GetAll());
         }
 
+        /// <summary>
+        /// 圖片上傳
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Upload()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 表單資料+圖片上傳
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Form()
         {
             return View();
         }
